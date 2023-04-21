@@ -1,13 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/vite.svg" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Chess - Home</title>
+		<meta
+			name="description"
+			content="Welcome to the world of Chess" />
+	</head>
+	<body style="margin: 0">
+		<header
+			style="
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: sticky;
+				top: 0;
+				background-color: #fff;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+				padding: 1rem 8rem;
+			">
+			<a
+				href="/"
+				style="
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				">
+				<img
+					src="/chessIcon.svg"
+					alt="Chess logo"
+					height="40px"
+					width="40px" />
+				<h1>Chess</h1>
+			</a>
+			<nav
+				style="
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				">
+				<ul
+					style="
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						list-style: none;
+					">
+					<li><a href="/">Home</a></li>
+					<li><a href="/info.html">Info</a></li>
+					<li><a href="/reviews.html">Reviews</a></li>
+				</ul>
+			</nav>
+			<style>
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+				li {
+					margin: 0 1rem;
+				}
+			</style>
+		</header>
+		<main>
+			<section
+				id="Hero"
+				style="
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 1rem;
+					min-height: 80vh;
+					padding: 1rem;
+				">
+				<div
+					id="right"
+					style="
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					">
+					<img
+						src="https://images.unsplash.com/photo-1571236207041-5fb70cec466e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+						alt="Chess image"
+						style="
+							width: 50% !important;
+							height: 50% !important;
+							object-fit: cover;
+							border-radius: 1rem;
+						"
+						srcset="" />
+				</div>
+				<div
+					id="Left"
+					style="
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: flex-start;
+						max-width: 80%;
+
+					">
+					<h1 style="font-size: 3rem">Chess</h1>
+					<p style="font-size: 1.5rem; text-align: left">
+						Chess is a two-player strategy board game played on a
+						checkered board with 64 squares arranged in an 8×8 grid.
+						The game is believed to have originated in northern
+						India in the 6th century AD and has since spread around
+						the world.
+					</p>
+					<a href="/info.html" style="font-size: 1.5rem; background-color: #000; color: #fff; padding: 1rem; border-radius: 1rem; text-decoration: none">
+						Learn More
+					</a>
+				</div>
+			</section>
+			<section id="app" style="padding: 1rem; display:grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 1rem; min-height: 80vh">
+				<div class="card">
+					<h3 style="font-size: 2rem">
+						Learn to Play
+					</h3>
+					<p style="font-size: 2rem">
+						If you're new to chess, check out our beginner's guide
+						to learn the rules and basic strategies.
+					</p>
+					<a href="/info.html">Learn More</a>
+				</div>
+				<div class="card">
+					<h3 style="font-size: 2rem">
+						Watch Tournaments
+					</h3>
+					<p style="font-size: 2rem">
+						Watch live or recorded chess tournaments from around the
+						world, featuring the best players in the game.
+					</p>
+					<video
+						src="/tournament.mp4"
+						controls
+						style="width: 100%; height:50%; border-radius: 1rem"></video>
+				</div>
+				<div class="card">
+					<h3 style="font-size: 2rem">
+						Play Online
+					</h3>
+					<p>
+						Play chess online with friends or against the computer.
+					</p>
+					<a href="https://chess.com/">Play Now</a>
+				</div>
+				<style>
+				</style>
+			</section>
+		</main>
+		<footer style="min-width: 100vw; background-color: #000; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box">
+			<p style="font-size: 1.5rem">
+				Chess &copy; 2021
+			</p>
+			<h3 style="font-size: 2rem">
+				Join our Newsletter
+			</h3>
+			<form
+				id="newsletter-form"
+				method="POST"
+				action="https://httpbin.org/post">
+				<label for="email"
+					>Enter your email to join our newsletter:</label
+				>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required />
+				<input
+					type="hidden"
+					name="name"
+					value="Your Name" />
+				<button type="submit">Join</button>
+			</form>
+		</footer>
+	</body>
 </html>
