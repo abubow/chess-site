@@ -28,18 +28,7 @@
 			content="Welcome to the world of Chess" />
 	</head>
 	<body>
-		<header
-			style="
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				position: sticky;
-				top: 0;
-				background-color: #fff;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-				padding: 1rem 8rem;
-				z-index: 99;
-			">
+		<header>
 			<a
 				href="/"
 				style="
@@ -83,7 +72,7 @@
 			</style>
 		</header>
 		<main>
-			<section>
+			<section class="essay">
 				<h2>History of Chess</h2>
 				<article class="card">
 					<h3>The Origins in India</h3>
@@ -127,6 +116,7 @@
 						powers. The modern rules of chess were established in
 						the late 15th and early 16th centuries.
 					</p>
+					section.essay
 				</article>
 				<article class="card">
 					<h3>Chess Gains Popularity</h3>
@@ -143,7 +133,7 @@
 					</p>
 				</article>
 			</section>
-			<section>
+			<section class="essay">
 				<h2>How to Play Chess</h2>
 				<article class="card">
 					<h3>Basics</h3>
@@ -211,7 +201,7 @@
 					</p>
 				</article>
 			</section>
-			<section>
+			<section class="essay">
 				<h2>Winning Chess Strategies</h2>
 				<article class="card">
 					<h3>Control the center early.</h3>
@@ -283,5 +273,28 @@
 				</article>
 			</section>
 		</main>
+
+		<footer>
+			<p style="font-size: 1.5rem">Chess &copy; 2021</p>
+			<h3 style="font-size: 2rem">Join our Newsletter</h3>
+			<form
+				id="newsletter-form"
+				method="POST"
+				action="https://httpbin.org/post">
+				<label for="email"
+					>Enter your email to join our newsletter:</label
+				>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required />
+				<input
+					type="hidden"
+					name="name"
+					value="Your Name" />
+				<button type="submit">Join</button>
+			</form>
+		</footer>
 	</body>
 </html>

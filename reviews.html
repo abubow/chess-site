@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Chess - Information</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vidaloka&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Chess - Home</title>
+		<meta
+			name="description"
+			content="Welcome to the world of Chess" />
+		<script
+			src="data.js"
+			type="module"></script>
+		<script
+			defer
+			src="main.js"
+			type="module"></script>
+	</head>
+	<body>
+		<header>
+			<a
+				href="/"
+				style="
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				">
+				<img
+					src="/chessIcon.svg"
+					alt="Chess logo"
+					height="40px"
+					width="40px" />
+				<h1>Chess</h1>
+			</a>
+			<nav
+				style="
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				">
+				<ul
+					style="
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						list-style: none;
+					">
+					<li><a href="/">Home</a></li>
+					<li><a href="/info.html">Info</a></li>
+					<li><a href="/reviews.html">Reviews</a></li>
+				</ul>
+			</nav>
+			<style>
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+				li {
+					margin: 0 1rem;
+				}
+			</style>
+		</header>
+		<main style="padding: 4rem;">
+			<h1>Reviews</h1>
+			<p>Here are some reviews from our users:</p>
+			<section id="reviews">
+				<!-- review cards will be dynamically generated here -->
+			</section>
+			<div id="form-container">
+				<h2>Add a Review</h2>
+				<form id="review-form">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required />
+					</div>
+					<div class="form-group">
+						<label for="date">Date:</label>
+						<input
+							type="datetime-local"
+							id="date"
+							name="date"
+							required />
+					</div>
+					<div class="form-group">
+						<label for="rating">Rating:</label>
+						<input
+							type="number"
+							id="rating"
+							name="rating"
+							min="1"
+							max="5"
+							required />
+					</div>
+					<div class="form-group">
+						<label for="review">Review:</label>
+						<textarea
+							id="review"
+							name="review"
+							required></textarea>
+					</div>
+					<div class="form-group">
+						<button
+							type="submit"
+							id="create">
+							Create
+						</button>
+					</div>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p style="font-size: 1.5rem">Chess &copy; 2021</p>
+			<h3 style="font-size: 2rem">Join our Newsletter</h3>
+			<form
+				id="newsletter-form"
+				method="POST"
+				action="https://httpbin.org/post">
+				<label for="email"
+					>Enter your email to join our newsletter:</label
+				>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required />
+				<input
+					type="hidden"
+					name="name"
+					value="Your Name" />
+				<button type="submit">Join</button>
+			</form>
+		</footer>
+	</body>
+</html>
