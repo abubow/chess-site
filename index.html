@@ -59,13 +59,13 @@
 					<li><a href="/">Home</a></li>
 					<li><a href="/info.html">Info</a></li>
 					<li><a href="/reviews.html">Reviews</a></li>
-                    <li><a href="/about.html">About</a></li>
+					<li><a href="/about.html">About</a></li>
 				</ul>
 			</nav>
 			<style>
 				a {
 					text-decoration: none;
-					color: #000;
+					color: var(--primary-color);;
 				}
 				li {
 					margin: 0 1rem;
@@ -73,15 +73,7 @@
 			</style>
 		</header>
 		<main>
-			<section
-				id="Hero"
-				style="
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-gap: 1rem;
-					min-height: 80vh;
-					padding: 1rem;
-				">
+			<section id="Hero">
 				<div
 					id="right"
 					style="
@@ -118,27 +110,68 @@
 						the world.
 					</p>
 					<a
-						href="/info.html"
-						style="
-							font-size: 1.5rem;
-							background-color: #000;
-							color: #fff;
-							padding: 1rem;
-							border-radius: 1rem;
-							text-decoration: none;
-						">
+						href="/info.html">
 						Learn More
 					</a>
 				</div>
 			</section>
-			<section
-				id="app"
-				style="
-					padding: 1rem 8rem ;
+			<style>
+				#Hero {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 1rem;
+					min-height: 80vh;
+					padding: 1rem;
+					background-color: var(--primary-color);;
+					color: var(--tertiary-color);
+				}
+				#Hero h1 {
+					font-size: 3rem;
+				}
+				#Hero p {
+					font-size: 1.5rem;
+					text-align: left;
+				}
+				#Hero a {
+					background-color: var(--tertiary-color);
+					color: var(--primary-color);
+					padding: 0.5rem 1rem;
+					border-radius: 0.5rem;
+					font-size: 1.5rem;
+					text-decoration: none;
+					margin: 4rem 0;
+				}
+				#Hero>.left{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					max-width: 80%;
+					grid-column: 1/2;
+				}
+				@media (max-width: 768px) {
+					#Hero {
+						grid-template-columns: 1fr;
+						padding: 4rem;
+					}
+					#Hero .left{
+						padding: 3rem;
+					}
+				}
+				.cards {
+					padding: 1rem 8rem;
 					display: grid;
 					grid-template-columns: 1fr 1fr 1fr;
 					grid-gap: 1rem;
-				">
+				}
+				@media (max-width: 768px) {
+					.cards {
+						grid-template-columns: 1fr;
+					}
+				}
+			</style>
+			<section
+				class="cards">
 				<div class="card">
 					<section>
 						<h3>Learn to Play</h3>
